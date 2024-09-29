@@ -7,10 +7,11 @@ form{
     gap: 24px;
     margin-bottom: 34px;
 
-    span {
+    span{
         font-size: 14px;
         text-decoration: underline;
         color: $secundary-color;
         text-align: end;
+        cursor: pointer;
     }
 }
