@@ -1,0 +1,61 @@
+@import "../../../styles/variables.scss";
+
+.background {
+    width: 325px;
+    height: 78.15px;
+}
+
+button {
+    background-color: transparent; /* Fundo transparente inicialmente */
+    opacity: 1; /* Opacidade total para ícones e texto */
+    border-radius: 24px;
+    border-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease; /* Transição suave para a cor de fundo */
+
+    /* Efeito de hover */
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Fundo branco com 20% de opacidade ao passar o mouse */
+        cursor: pointer;
+    }
+
+    /* Estilo para o ícone quando o mouse está sobre o botão */
+    &:hover .icon-bg {
+        background-color: rgba($primary-color, 1); /* Fundo do ícone com 20% de opacidade */
+    }
+
+    &:active {
+        transform: scale(0.98); /* Reduz o botão levemente ao clicar */
+    }
+}
+
+.content {
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.icon-bg {
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 60px;
+    width: 60px;
+    background-color: transparent; /* Cor inicial do fundo do ícone */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo do ícone */
+}
+
+.icon {
+    height: 100%;
+    width: 100%; 
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+p {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px; /* Remove margens padrão do parágrafo */
+    line-height: 50px; /* Alinha o texto verticalmente com a altura do botão */
+}

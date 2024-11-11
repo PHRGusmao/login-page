@@ -14,6 +14,7 @@ export class LoginService {
   login(email: string, password: string){
     return this.httpClient.post<LoginResponse>(this.apiURL + "/login",{email, password}).pipe(
       tap((value) =>{
+        sessionStorage.setItem("id", value.id)
         sessionStorage.setItem("auth-token", value.token)
         sessionStorage.setItem("username", value.name)
       })
@@ -23,6 +24,7 @@ export class LoginService {
   signup(name: string, email: string, password: string){
     return this.httpClient.post<LoginResponse>(this.apiURL+ "/register",{name, email, password}).pipe(
       tap((value) =>{
+        sessionStorage.setItem("id", value.id)
         sessionStorage.setItem("auth-token", value.token)
         sessionStorage.setItem("username", value.name)
       })

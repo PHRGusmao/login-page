@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    font-size: 50px; /* Tamanho inicial antes da animação */
+    animation: animateText 1s ease forwards; /* Aplica a animação aprimorada */
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #31005B, #9360BF); /* Degradê com uma transição no meio */
+    padding: 15px;
+    margin: 0;
+
+}
+
+footer{
+    height: 350px;
+    width: 100%;
+    background-color: #31005B;
+    
+}
+
+/* Animação aprimorada para reduzir tamanho do texto, mudar cor, e opacidade */
+@keyframes animateText {
+    0% {
+        font-size: 50px; /* Tamanho inicial */
+        color: $green-primary; /* Cor inicial */
+        opacity: 1; /* Opacidade total */
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        font-size: 40px; /* Tamanho intermediário */
+        color: $primary-color; /* Cor intermediária */
+        opacity: 1; /* Opacidade total */
+        transform: translateY(-10px); /* Move um pouco para cima */
+    }
+    75% {
+        opacity: 1; /* Mantém a opacidade total */
+        color: $primary-color;
+        transform: translateY(-10px); /* Mantém a posição */
+        font-size: 40px; /* Mantém o tamanho */
+    }
+    100% {
+        opacity: 0; /* Desaparece */
+        color: $green-primary;
+        transform: translateY(10px); /* Move para baixo */
+        font-size: 80px; /* Tamanho final opcional */
+    }
+}
